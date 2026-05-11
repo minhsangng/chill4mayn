@@ -1,0 +1,49 @@
+window.addEventListener("load", function () {
+  document
+    .querySelector("#showMenu")
+    .addEventListener("click", function (event) {
+      document.querySelector("#mobileNav").classList.remove("hidden");
+    });
+
+  document
+    .querySelector("#hideMenu")
+    .addEventListener("click", function (event) {
+      document.querySelector("#mobileNav").classList.add("hidden");
+    });
+
+  document.querySelectorAll("[toggleElement]").forEach((toggle) => {
+    toggle.addEventListener("click", function (event) {
+      console.log(toggle);
+      const answerElement = toggle.querySelector("[answer]");
+      const caretElement = toggle.querySelector("img");
+      console.log(answerElement);
+      if (answerElement.classList.contains("hidden")) {
+        answerElement.classList.remove("hidden");
+        caretElement.classList.add("rotate-90");
+      } else {
+        answerElement.classList.add("hidden");
+        caretElement.classList.remove("rotate-90");
+      }
+    });
+  });
+  
+  const dataHome = loadAPI("phim-moi").then(data => console.log(data.items[0].thumb_url));
+});
+
+const baseAPI = "https://ophim1.com/v1/api/";
+const options = {method: 'GET', headers: {accept: 'application/json'}};
+const imgAPI = "https://img.ophim.live/uploads/movies/";
+
+async function loadAPI(path) {
+  if (!path.trim()) return null;
+
+  try {
+    const res = await fetch(`${baseAPI}/${path}`, options);
+    const json = await res.json();
+
+    return json.data;
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+}
