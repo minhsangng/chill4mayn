@@ -27,7 +27,34 @@ window.addEventListener("load", function () {
     });
   });
   
-  const dataHome = loadAPI("phim-moi").then(data => console.log(data.items[0].thumb_url));
+  const newMoviesSection = document.getElementById("new-movies");
+  const newMovies = loadNewMovies();
+  
+  if (newMoviesSection) {
+    newMovies.then((newMovies) => {
+      if (!newMovies) return;
+      
+      newMovies.forEach((movie, index) => {
+        if (index >= 3) return;
+        
+        const strCategories = movie.category.map((cat) => `<span class="bg-black text-white px-2 py-1 rounded-md mr-2">${cat.name}</span>`).join(" - ");
+        
+        const movieElement = `
+          <div class="flex-1 mx-8 flex flex-col items-center my-4">
+            <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
+              ${index + 1}
+            </div>
+            <h3 class="font-montserrat font-medium text-xl h-14 mb-2">${movie.name}</h3>
+            <p class="text-center font-montserrat">
+              ${strCategories}
+            </p>
+          </div>
+        `;
+        
+        newMoviesSection.innerHTML += movieElement;
+      });
+    });
+  }  
 });
 
 const baseAPI = "https://ophim1.com/v1/api/";
@@ -42,6 +69,17 @@ async function loadAPI(path) {
     const json = await res.json();
 
     return json.data;
+  } catch (err) {
+    console.error(err);
+    return null;
+  }
+}
+
+async function loadNewMovies() {
+  try {
+    const response = await loadAPI("danh-sach/phim-moi");
+    
+    return response.items;
   } catch (err) {
     console.error(err);
     return null;

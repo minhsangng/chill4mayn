@@ -17,40 +17,35 @@
     </div>
     <ul class="font-montserrat items-center hidden md:flex">
       <li class="mx-3">
-        <a class="growing-underline" href="howitworks">
-          How it works
-        </a>
+        <a class="growing-underline" href="#new">Phim Mới</a>
       </li>
       <li class="growing-underline mx-3">
-        <a href="features">Features</a>
+        <a href="#categories">Danh Mục</a>
       </li>
       <li class="growing-underline mx-3">
-        <a href="pricing">Pricing</a>
+        <a href="#top">Phim Hot</a>
       </li>
     </ul>
     <div class="font-montserrat hidden md:block">
-      <button class="mr-6">Login</button>
-      <button class="py-2 px-4 text-white bg-black rounded-3xl">
-        Signup
-      </button>
+      <input type="search" name="search" id="search" placeholder="Tìm theo phim, diễn viên..." class="px-4 py-2 rounded-xl" />
     </div>
     <div id="showMenu" class="md:hidden">
-      <img src='dist/assets/logos/Menu.svg' alt="Menu icon" />
+      <img src="dist/assets/logos/Menu.svg" alt="Menu icon" />
     </div>
   </nav>
-  <div id='mobileNav' class="hidden px-4 py-6 fixed top-0 left-0 h-full w-full bg-secondary z-20 animate-fade-in-down">
+  <div id="mobileNav" class="hidden px-4 py-6 fixed top-0 left-0 h-full w-full bg-secondary z-20 animate-fade-in-down">
     <div id="hideMenu" class="flex justify-end">
-      <img src='dist/assets/logos/Cross.svg' alt="" class="h-16 w-16" />
+      <img src="dist/assets/logos/Cross.svg" alt="" class="h-16 w-16" />
     </div>
     <ul class="font-montserrat flex flex-col mx-8 my-24 items-center text-3xl">
       <li class="my-6">
-        <a href="howitworks">How it works</a>
+        <a href="#new">Phim Mới</a>
       </li>
       <li class="my-6">
-        <a href="features">Features</a>
+        <a href="#categories">Danh Mục</a>
       </li>
       <li class="my-6">
-        <a href="pricing">Pricing</a>
+        <a href="#top">Phim Hot</a>
       </li>
     </ul>
   </div>
@@ -80,60 +75,32 @@
     </div>
     <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
       <div class="relative">
-        <img src='dist/assets/Highlight1.svg' alt="" class="absolute -top-16 -left-10" />
+        <img src="dist/assets/Highlight1.svg" alt="" class="absolute -top-16 -left-10" />
       </div>
-      <img src='dist/assets/MacBook Pro.png' alt="Macbook" />
+      <img src="dist/assets/MacBook Pro.png" alt="Macbook" />
       <div class="relative">
-        <img src='dist/assets/Highlight2.svg' alt="" class="absolute -bottom-10 -right-6" />
+        <img src="dist/assets/Highlight2.svg" alt="" class="absolute -bottom-10 -right-6" />
       </div>
     </div>
   </section>
 
-  <!-- How it works -->
-  <section class="bg-black text-white sectionSize">
+  <!-- Phim Mới -->
+  <section class="bg-black text-white sectionSize" id="new">
     <div>
-      <h2 class="secondaryTitle bg-underline2 bg-100%">How it works</h2>
+      <h2 class="secondaryTitle bg-underline2 bg-100%">Phim Mới</h2>
     </div>
-    <div class="flex flex-col md:flex-row">
-      <div class="flex-1 mx-8 flex flex-col items-center my-4">
-        <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
-          1
-        </div>
-        <h3 class="font-montserrat font-medium text-xl mb-2">Eat</h3>
-        <p class="text-center font-montserrat">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <div class="flex-1 mx-8 flex flex-col items-center my-4">
-        <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
-          2
-        </div>
-        <h3 class="font-montserrat font-medium text-xl mb-2">Sleep</h3>
-        <p class="text-center font-montserrat">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <div class="flex-1 mx-8 flex flex-col items-center my-4">
-        <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
-          3
-        </div>
-        <h3 class="font-montserrat font-medium text-xl mb-2">Rave</h3>
-        <p class="text-center font-montserrat">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-    </div>
+    <div class="flex flex-col md:flex-row" id="new-movies"></div>
   </section>
 
-  <!-- Features -->
-  <section class="sectionSize bg-secondary">
+  <!-- Danh Mục -->
+  <section class="sectionSize bg-secondary" id="categories">
     <div>
       <h2 class="secondaryTitle bg-underline3 bg-100%">Features</h2>
     </div>
     <div class="md:grid md:grid-cols-2 md:grid-rows-2">
 
       <div class="flex items-start font-montserrat my-6 mr-10">
-        <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
+        <img src="dist/assets/logos/Heart.svg" alt="" class="h-7 mr-4" />
         <div>
           <h3 class="font-semibold text-2xl">Feature #1</h3>
           <p>
@@ -146,7 +113,7 @@
       </div>
 
       <div class="flex items-start font-montserrat my-6 mr-10">
-        <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
+        <img src="dist/assets/logos/Heart.svg" alt="" class="h-7 mr-4" />
         <div>
           <h3 class="font-semibold text-2xl">Feature #2</h3>
           <p>
@@ -159,7 +126,7 @@
       </div>
 
       <div class="flex items-start font-montserrat my-6 mr-10">
-        <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
+        <img src="dist/assets/logos/Heart.svg" alt="" class="h-7 mr-4" />
         <div>
           <h3 class="font-semibold text-2xl">Feature #3</h3>
           <p>
@@ -172,7 +139,7 @@
       </div>
 
       <div class="flex items-start font-montserrat my-6 mr-10">
-        <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
+        <img src="dist/assets/logos/Heart.svg" alt="" class="h-7 mr-4" />
         <div>
           <h3 class="font-semibold text-2xl">Feature #4</h3>
           <p>
@@ -187,10 +154,10 @@
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section class="sectionSize bg-secondary py-0">
+  <!-- Top -->
+  <section class="sectionSize bg-secondary py-0" id="top">
     <div>
-      <h2 class="secondaryTitle bg-underline4 mb-0 bg-100%">Pricing</h2>
+      <h2 class="secondaryTitle bg-underline4 mb-0 bg-100%">Phim Hot</h2>
     </div>
     <div class="flex w-full flex-col md:flex-row">
 
@@ -204,15 +171,15 @@
         </div>
 
         <div class="flex">
-          <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+          <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
           <p>Benefit #1</p>
         </div>
         <div class="flex">
-          <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+          <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
           <p>Benefit #2</p>
         </div>
         <div class="flex">
-          <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+          <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
           <p>Benefit #3</p>
         </div>
 
@@ -231,15 +198,15 @@
         </div>
 
         <div class="flex">
-          <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+          <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
           <p>Benefit #1</p>
         </div>
         <div class="flex">
-          <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+          <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
           <p>Benefit #2</p>
         </div>
         <div class="flex">
-          <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+          <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
           <p>Benefit #3</p>
         </div>
 
@@ -258,15 +225,15 @@
         </div>
 
         <div class="flex">
-          <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+          <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
           <p>Benefit #1</p>
         </div>
         <div class="flex">
-          <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+          <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
           <p>Benefit #2</p>
         </div>
         <div class="flex">
-          <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+          <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
           <p>Benefit #3</p>
         </div>
 
@@ -291,7 +258,7 @@
         <div question class="font-montserrat font-medium mr-auto">
           Where can I get this HTML template?
         </div>
-        <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
+        <img src="dist/assets/logos/CaretRight.svg" alt="" class="transform transition-transform" />
       </div>
       <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
         You can download it on Gumroad.com
@@ -304,7 +271,7 @@
         <div question class="font-montserrat font-medium mr-auto">
           Is this HTML template free?
         </div>
-        <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
+        <img src="dist/assets/logos/CaretRight.svg" alt="" class="transform transition-transform" />
       </div>
       <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
         Yes! For you it is free.
@@ -317,7 +284,7 @@
         <div question class="font-montserrat font-medium mr-auto">
           Am I awesome?
         </div>
-        <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
+        <img src="dist/assets/logos/CaretRight.svg" alt="" class="transform transition-transform" />
       </div>
       <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
         Yes! No doubt about it.
@@ -330,20 +297,20 @@
   <!-- Footer -->
   <section class="bg-black sectionSize">
     <div class="mb-4">
-      <img src='dist/assets/Logo_white.svg' alt="Logo" class="h-4" />
+      <img src="dist/assets/Logo_white.svg" alt="Logo" class="h-4" />
     </div>
     <div class="flex mb-8">
       <a href="#">
-        <img src='dist/assets/logos/Facebook.svg' alt="Facebook logo" class="mx-4" />
+        <img src="dist/assets/logos/Facebook.svg" alt="Facebook logo" class="mx-4" />
       </a>
       <a href="#">
-        <img src='dist/assets/logos/Youtube.svg' alt="Youtube logo" class="mx-4" />
+        <img src="dist/assets/logos/Youtube.svg" alt="Youtube logo" class="mx-4" />
       </a>
       <a href="#">
-        <img src='dist/assets/logos/Instagram.svg' alt="Instagram logo" class="mx-4" />
+        <img src="dist/assets/logos/Instagram.svg" alt="Instagram logo" class="mx-4" />
       </a>
       <a href="#">
-        <img src='dist/assets/logos/Twitter.svg' alt="Twitter logo" class="mx-4" />
+        <img src="dist/assets/logos/Twitter.svg" alt="Twitter logo" class="mx-4" />
       </a>
     </div>
     <div class="text-white font-montserrat text-sm">
