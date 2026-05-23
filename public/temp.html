@@ -34,6 +34,7 @@
             background-color: var(--color-secondary);
         }
         .bg-light {
+            --tw-bg-opacity: 1;
             background-color: var(--color-light);
         }
         .color-primary {
@@ -41,6 +42,15 @@
         }
         .color-light {
             color: var(--color-light);
+        }
+        .decor__line {
+            background-image: url('dist/assets/decor-line.png');
+            background-size: contain;
+            background-position: center;
+            width: 100vw;
+            height: 2rem;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
         }
         nav li {
             -webkit-backdrop-filter: blur(10px);
@@ -50,7 +60,7 @@
             opacity: 1;
         }
         nav li.active {
-            background-color: var(--color-light);
+            --tw-bg-opacity: 1;
         }
         nav a,  nav [class^='iconoir-']::before {
             width: 1.5rem !important;
@@ -61,7 +71,7 @@
             background-image: url('dist/assets/background-hero.png');
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            background-position: center 0%;
         }
         .box__hero--title {
             background-image: url('dist/assets/Underline1.svg');
@@ -90,6 +100,7 @@
             height: auto;
             pointer-events: none;
             transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
             transition: all 0.75s linear;
             animation: spawnFlower 0.5s ease forwards;
             z-index: 9999;
@@ -105,13 +116,11 @@
                 transform: translate(-50%, -50%) scale(0);
                 opacity: 0;
             }
-
-            70% {
+            60% {
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(1);
                 opacity: 1;
             }
-
             100% {
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(0.75);
@@ -120,16 +129,16 @@
         }
     </style>
 </head>
-<body class="min-h-screen w-screen overflow-x-hidden">
+<body class="min-h-screen w-screen overflow-x-hidden bg-light">
     <div class="page">
         <header class="w-12 h-fit fixed left-2 top-1/2 transform -translate-y-1/2">
             <nav>
                 <ul class="space-y-4">
-                    <li class="rounded-full w-10 h-10 bg-white bg-opacity-60 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative active"><a href=""><i class="iconoir-home"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Trang chủ</span></a></li>
-                    <li class="rounded-full w-10 h-10 bg-white bg-opacity-60 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="#"><i class="iconoir-search"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Tìm kiếm</span></a></li>
-                    <li class="rounded-full w-10 h-10 bg-white bg-opacity-60 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="#"><i class="iconoir-cube-replace-face"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Học tập</span></a></li>
-                    <li class="rounded-full w-10 h-10 bg-white bg-opacity-60 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="#"><i class="iconoir-info-circle"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Giới thiệu</span></a></li>
-                    <li class="rounded-full w-10 h-10 bg-white bg-opacity-60 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="javascript:void(0);"><i class="iconoir-chat-bubble"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Phản hồi</span></a></li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative active"><a href=""><i class="iconoir-home"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Trang chủ</span></a></li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="#"><i class="iconoir-search"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Tìm kiếm</span></a></li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="#"><i class="iconoir-cube-replace-face"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Học tập</span></a></li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="#"><i class="iconoir-info-circle"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Giới thiệu</span></a></li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="javascript:void(0);"><i class="iconoir-chat-bubble"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Phản hồi</span></a></li>
                 </ul>
             </nav>
         </header>
@@ -158,9 +167,13 @@
         <main>
             <article>
                 <section class="hero h-screen w-screen pt-24">
-                    <div class="box__hero--title">
+                    <div class="box__hero--title select-none">
                         <h1 class="text-4xl tracking-wider leading-10 text-center font-bold uppercase">Học bằng kiến thức <br> Phát triển bằng trải nghiệm</h1>
                     </div>
+                    
+                </section>
+                <div class="decor__line"></div>
+                <section class="h-screen w-screen">
                     
                 </section>
             </article>
@@ -179,7 +192,7 @@
         });
         function pointerEffect(event) {
             const img = document.createElement('img');
-            const minSize = 25;
+            const minSize = 20;
             const maxSize = 50;
             const randomSize = Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize;
             
