@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "AlbulaPro";
+    src: url("./assets/fonts/AlbulaPro-Regular.otf");
+}
+
+:root {
+    --color-primary: #0e0e0e;
+    --color-secondary: #dbe9f3;
+    --color-light: #f5f4fd;
+    --color-border: #c5a4a0;
+    --font-family: "AlbulaPro";
+    --font-size: 1rem;
+    --font-weight: 500;
+    --line-height: 1.15em;
+}
+
+* {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    color: var(--color-primary);
+    border-color: var(--color-border);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-light {
+    --tw-bg-opacity: 1;
+    background-color: var(--color-light);
+}
+
+.color-primary {
+    color: var(--color-primary);
+}
+
+.color-light {
+    color: var(--color-light);
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.decor__line {
+    background-image: url('./assets/decor-line.png');
+    background-size: contain;
+    background-position: center;
+    width: 100vw;
+    height: 2rem;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}

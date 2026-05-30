@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-css-starter-postcss",
+  "name": "kindergarten",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,12 +11,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "autoprefixer": "^10.2.1",
-    "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.0.2"
-  },
   "devDependencies": {
-    "onchange": "^7.1.0"
+    "autoprefixer": "^10.4.16",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.19"
   }
 }

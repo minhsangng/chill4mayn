@@ -1,192 +1,141 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website offical of kindergarten Hong Phuc">
     <title>Document</title>
-    
+
+    <link rel="shortcut icon" href="dist/assets/logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="stylesheet" href="dist/root.css" />
+    <link rel="stylesheet" href="dist/user.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
-    
-    <style>
-        :root {
-            --color-primary: #0e0e0e;
-            --color-secondary: #dbe9f3;
-            --color-light: #f5f4fd;
-            --color-border: #c5a4a0;
-            --font-family: 'Montserrat';
-            --font-size: 1rem;
-            --font-weight: 500;
-            --line-height: 1.15em;
-        }
-        * {
-            font-family: var(--font-family);
-            font-size: var(--font-size);
-            font-weight: var(--font-weight);
-            line-height: var(--line-height);
-            color: var(--color-primary);
-            border-color: var(--color-border);
-        }
-        .bg-primary {
-            background-color: var(--color-primary);
-        }
-        .bg-secondary {
-            background-color: var(--color-secondary);
-        }
-        .bg-light {
-            --tw-bg-opacity: 1;
-            background-color: var(--color-light);
-        }
-        .color-primary {
-            color: var(--color-primary);
-        }
-        .color-light {
-            color: var(--color-light);
-        }
-        .decor__line {
-            background-image: url('dist/assets/decor-line.png');
-            background-size: contain;
-            background-position: center;
-            width: 100vw;
-            height: 2rem;
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
-        }
-        nav li {
-            -webkit-backdrop-filter: blur(10px);
-        }
-        nav li:hover span {
-            display: inline-block;
-            opacity: 1;
-        }
-        nav li.active {
-            --tw-bg-opacity: 1;
-        }
-        nav a,  nav [class^='iconoir-']::before {
-            width: 1.5rem !important;
-            height: 1.5rem !important;
-            font-weight: bold;
-        }
-        .hero {
-            background-image: url('dist/assets/background-hero.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center 0%;
-        }
-        .box__hero--title {
-            background-image: url('dist/assets/Underline1.svg');
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: 0% 170%;
-            width: fit-content;
-            margin: 0 auto;
-            overflow: visible;
-            position: relative;
-        }
-        .box__hero--title::after {
-            content: '';
-            width: 3rem;
-            height: 3rem;
-            position: absolute;
-            top: -10%;
-            right: 6%;
-            background-image: url('dist/assets/dinosaur.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }   
-        .spawn-img {
-            position: fixed;
-            height: auto;
-            pointer-events: none;
-            transform: translate(-50%, -50%) scale(0);
-            opacity: 0;
-            transition: all 0.75s linear;
-            animation: spawnFlower 0.5s ease forwards;
-            z-index: 9999;
-            filter: drop-shadow(0 0 10px var(--color-secondary));
-        }
-        body.is-spawning {
-            cursor: pointer;
-        }
-        
-        @keyframes spawnFlower {
-            0% {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0);
-                opacity: 0;
-            }
-            60% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 1;
-            }
-            100% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(0.75);
-                opacity: 0.75;
-            }
-        }
-    </style>
 </head>
+
 <body class="min-h-screen w-screen overflow-x-hidden bg-light">
     <div class="page">
-        <header class="w-12 h-fit fixed left-2 top-1/2 transform -translate-y-1/2">
+        <header class="w-12 h-fit fixed left-2 top-1/2 transform -translate-y-1/2 z-50">
             <nav>
                 <ul class="space-y-4">
-                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative active"><a href=""><i class="iconoir-home"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Trang chủ</span></a></li>
-                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="#"><i class="iconoir-search"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Tìm kiếm</span></a></li>
-                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="#"><i class="iconoir-cube-replace-face"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Học tập</span></a></li>
-                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="#"><i class="iconoir-info-circle"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Giới thiệu</span></a></li>
-                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative"><a href="javascript:void(0);"><i class="iconoir-chat-bubble"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Phản hồi</span></a></li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative active">
+                        <a href=""><i class="iconoir-home"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Trang chủ</span></a>
+                    </li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative">
+                        <a href="javascript:void(0);"><i class="iconoir-search"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Tìm kiếm</span></a>
+                    </li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative">
+                        <a href="javascript:void(0);"><i class="iconoir-cube-replace-face"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Học tập</span></a>
+                    </li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative">
+                        <a href="javascript:void(0);"><i class="iconoir-info-circle"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Giới thiệu</span></a>
+                    </li>
+                    <li class="rounded-full w-10 h-10 bg-light bg-opacity-50 hover:bg-opacity-100 backdrop-filter backdrop-blur-sm shadow-lg transition-all linear flex items-center justify-center relative">
+                        <a href="javascript:void(0);"><i class="iconoir-chat-bubble"></i><span class="hidden opacity-0 absolute w-max bg-white rounded-tr-full rounded-br-full py-1 px-2 top-1/2 transform -translate-y-1/2 transition-all linear z-0">Hổ trợ</span></a>
+                    </li>
                 </ul>
             </nav>
         </header>
-        <div class="box__info--top w-screen h-14 absolute top-0 left-0 px-14 flex justify-between items-center gap-x-10">
-            <div class="box__info--top-left w-72 h-12 bg-light rounded-full flex items-center justify-center shadow-lg">
-                <h1 class="text-xl font-bold uppercase">Mầm non</h1>
+        <div class="box__info--top w-screen absolute top-0 left-0 pl-36 flex justify-between items-center gap-x-20 z-50">
+            <div class="box__info--top-left w-1/4 flex items-center justify-center gap-x-2">
+                <img src="dist/assets/logo.webp" width="50px" height="50px" alt="Logo">
+                <div class="flex flex-col justify-center items-start">
+                    <p class="text-xs">Lớp trẻ tư thục</p>
+                    <h1 class="text-xl font-bold uppercase">Hồng Phúc</h1>
+                </div>
             </div>
-            <div class="box__info--top-center w-full h-full bg-light rounded-bl-full rounded-br-full px-16 py-2 flex justify-between items-center gap-x-5 shadow-lg">
+            <div class="box__info--top-right w-3/4 h-32 bg-light rounded-bl-full px-16 py-2 flex justify-around items-center shadow-lg">
                 <div class="flex flex-col items-center">
-                    <p class="text-xs opacity-60 flex items-center gap-x-1 mb-1"><i class="iconoir-phone"></i> Liên hệ</p>
+                    <p class="text-xs opacity-60 flex items-center gap-x-1 mb-1"><i class="iconoir-phone"></i>Liên hệ</p>
                     <a href="tel:0912345678" target="_blank" class="text-sm">0912345678</a>
                 </div>
                 <div class="flex flex-col items-center">
-                    <p class="text-xs opacity-60 flex items-center gap-x-1 mb-1"><i class="iconoir-map-pin"></i> Địa chỉ</p>
+                    <p class="text-xs opacity-60 flex items-center gap-x-1 mb-1"><i class="iconoir-map-pin"></i>Địa chỉ</p>
                     <a href="https://maps.app.goo.gl/LktxyUqYsH3qVefb9" target="_blank" class="text-sm">Lộ Vàm, Chợ Gạo</a>
                 </div>
                 <div class="flex flex-col items-center">
-                    <p class="text-xs opacity-60 flex items-center gap-x-1 mb-1"><i class="iconoir-tiktok"></i> MXH</p>
+                    <p class="text-xs opacity-60 flex items-center gap-x-1 mb-1"><i class="iconoir-tiktok"></i>MXH</p>
                     <a href="https://tiktok.com" target="_blank" class="text-sm">TikTok</a>
                 </div>
-            </div>
-            <div class="box__info--top-right w-72 h-12 bg-light rounded-full flex items-center justify-center shadow-lg">
-                <h1 class="text-xl font-bold uppercase">Hồng Phúc</h1>
             </div>
         </div>
         <main>
             <article>
-                <section class="hero h-screen w-screen pt-24">
+                <section class="section hero pt-48">
                     <div class="box__hero--title select-none">
                         <h1 class="text-4xl tracking-wider leading-10 text-center font-bold uppercase">Học bằng kiến thức <br> Phát triển bằng trải nghiệm</h1>
                     </div>
-                    
                 </section>
                 <div class="decor__line"></div>
-                <section class="h-screen w-screen">
-                    
+                <section class="section sectionSize">
+                    <div><h2 class="secondaryTitle bg-underline4 mb-0 bg-100% uppercase">Nhóm lớp</h2></div>
+                    <div class="flex w-full flex-col md:flex-row">
+                        <div class="flex-1 flex flex-col mx-6 shadow-2xl relative rounded-2xl py-5 px-8 my-8 md:top-20">
+                            <h3 class="font-pt-serif font-normal text-2xl text-center mb-4">Lớp Mầm</h3>
+                            <div class="font-montserrat font-bold text-2xl text-center mb-4">1<span class="font-normal text-base"> tuổi</span></div>
+                            <div class="flex">
+                                <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
+                                <p>Học các kỹ năng cơ bản</p>
+                            </div>
+                            <div class="flex">
+                                <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
+                                <p>Phát triển khả năng giao tiếp</p>
+                            </div>
+                            <div class="flex">
+                                <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
+                                <p>Hình thành kỹ năng vận động</p>
+                            </div>
+
+                            <button class="border-2 border-solid border-black hover:bg-black hover:text-white transition-all ease-linear rounded-xl text-lg py-3 mt-4">Ghi danh</button>
+                        </div>
+                        <div class="flex-1 flex flex-col mx-6 shadow-2xl relative rounded-2xl py-5 px-8 my-8 md:top-8">
+                            <h3 class="font-pt-serif font-normal text-2xl text-center mb-4">Lớp Lá</h3>
+                            <div class="font-montserrat font-bold text-2xl text-center mb-4">3<span class="font-normal text-base"> tuổi</span></div>
+                            <div class="flex">
+                                <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
+                                <p>Học kiến thức nền tảng</p>
+                            </div>
+                            <div class="flex">
+                                <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
+                                <p>Phát triển tư duy, logic</p>
+                            </div>
+                            <div class="flex">
+                                <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
+                                <p>Luyện khả năng tự lập</p>
+                            </div>
+                            <button class="border-2 border-solid border-black hover:bg-black hover:text-white transition-all ease-linear rounded-xl text-lg py-3 mt-4">Ghi danh</button>
+                        </div>
+                        <div class="flex-1 flex flex-col mx-6 shadow-2xl relative rounded-2xl py-5 px-8 my-8 md:top-20">
+                            <h3 class="font-pt-serif font-normal text-2xl text-center mb-4">Lớp Chồi</h3>
+                            <div class="font-montserrat font-bold text-2xl text-center mb-4">2<span class="font-normal text-base"> tuổi</span></div>
+                            <div class="flex">
+                                <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
+                                <p>Mở rộng vốn từ, phát âm</p>
+                            </div>
+                            <div class="flex">
+                                <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
+                                <p>Làm quen toán học cơ bản</p>
+                            </div>
+                            <div class="flex">
+                                <img src="dist/assets/logos/CheckedBox.svg" alt="" class="mr-1" />
+                                <p>Làm việc nhóm, vẽ tranh,...</p>
+                            </div>
+                            <button class="border-2 border-solid border-black hover:bg-black hover:text-white transition-all ease-linear rounded-xl text-lg py-3 mt-4">Ghi danh</button>
+                        </div>
+                    </div>
                 </section>
             </article>
         </main>
         <footer>
-        
+
         </footer>
     </div>
-    
+
     <script>
-        const imageUrl = ['dist/assets/pink-flower.png', 'dist/assets/yellow-flower.png'];
+        const images = ['pink-flower', 'yellow-flower'];
         let activeSpawnCount = 0;
-        
+
         document.addEventListener('click', function (event) {
             pointerEffect(event);
         });
@@ -195,22 +144,22 @@
             const minSize = 20;
             const maxSize = 50;
             const randomSize = Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize;
-            
-            img.src = imageUrl[Math.floor(Math.random() * imageUrl.length)];
+
+            img.src = 'dist/assets/' + images[Math.floor(Math.random() * images.length)] + '.png';
             img.className = 'spawn-img';
-            
+
             img.style.width = randomSize + 'px';
             img.style.left = event.clientX + 'px';
             img.style.top = event.clientY + 'px';
 
             document.body.appendChild(img);
-            
+
             activeSpawnCount++;
             document.body.classList.add('is-spawning');
-            
+
             img.addEventListener('animationend', function () {
                 img.remove();
-                
+
                 activeSpawnCount--;
 
                 if (activeSpawnCount <= 0) {
@@ -221,4 +170,5 @@
         }
     </script>
 </body>
+
 </html>

@@ -1,0 +1,92 @@
+/* Header */
+
+nav li {
+    -webkit-backdrop-filter: blur(10px);
+}
+
+nav li:hover span {
+    display: inline-block;
+    opacity: 1;
+}
+
+nav li.active {
+    --tw-bg-opacity: 1;
+}
+
+nav a,
+nav [class^='iconoir-']::before {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    font-weight: bold;
+}
+
+/* Hero section */
+
+.hero {
+    background-image: url('./assets/background-hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0%;
+}
+
+.box__hero--title {
+    background-image: url('./assets/Underline1.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0% 170%;
+    width: fit-content;
+    margin: 0 auto;
+    overflow: visible;
+    position: relative;
+}
+
+.box__hero--title::after {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: -10%;
+    right: 6%;
+    background-image: url('./assets/dinosaur.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.spawn-img {
+    position: fixed;
+    height: auto;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.75s linear;
+    animation: spawnFlower 0.5s ease forwards;
+    z-index: 9999;
+    filter: drop-shadow(0 0 10px var(--color-secondary));
+}
+
+body.is-spawning {
+    cursor: pointer;
+}
+
+/* Attribute */
+
+@keyframes spawnFlower {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.75);
+        opacity: 0.75;
+    }
+}
